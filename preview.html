@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>READ WOMAN BOOKCLUB</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --cream:#fbf7f2;
+    --brown:#3b2c23;
+    --pink:#e8b4b8;
+    --gold:#c9a24b;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:Inter, sans-serif;
+    background:var(--cream);
+    color:var(--brown);
+    scroll-behavior:smooth;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    z-index:1000;
+}
+
+nav h1{
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+nav a{
+    margin:0 10px;
+    text-decoration:none;
+    color:var(--brown);
+    font-weight:500;
+}
+
+/* HERO (FIXED IMAGE ONLY) */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+
+    /* ✅ REAL BOOK CLUB / LIBRARY / READING IMAGE */
+    background:linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)),
+    url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=2000&q=80') center/cover;
+}
+
+.hero h2{
+    font-family:"Playfair Display";
+    font-size:3.5rem;
+    margin-bottom:20px;
+    animation:fadeIn 2s ease;
+}
+
+.btn{
+    padding:12px 28px;
+    background:var(--brown);
+    color:white;
+    text-decoration:none;
+    margin-top:20px;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.btn:hover{background:var(--gold);}
+
+/* SECTIONS */
+section{
+    padding:100px 10%;
+}
+
+.title{
+    font-family:"Playfair Display";
+    font-size:2.5rem;
+    margin-bottom:40px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* AUTHORS */
+.author-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.author{
+    background:white;
+    padding:20px;
+    border-left:4px solid var(--gold);
+}
+
+/* SOCIAL PROOF */
+.quote{
+    font-style:italic;
+    background:#fff;
+    padding:20px;
+    border-left:3px solid var(--pink);
+}
+
+/* FORM */
+form input, form textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+    background:#1c1c1c;
+    color:#aaa;
+    text-align:center;
+    padding:50px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <h1>READ WOMAN BOOKCLUB</h1>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#reads">Reads</a>
+        <a href="#authors">Authors</a>
+        <a href="#submit">Submit Book</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <h2>READ WOMAN BOOKCLUB</h2>
+    <p>Where readers discover powerful stories written by women across the world.</p>
+    <a class="btn" href="#reads">Explore Reads</a>
+</section>
+
+<!-- CURRENT READS -->
+<section id="reads">
+    <h2 class="title">Current Reads</h2>
+    <div class="grid">
+        <div class="card">With My Back to the World — Victoria Chang</div>
+        <div class="card">What Remains After a Fire — Kanza Javed</div>
+        <div class="card">Cursed Daughters — Oyinkan Braithwaite</div>
+    </div>
+
+    <h2 class="title" style="margin-top:60px;">Upcoming Reads</h2>
+    <div class="grid">
+        <div class="card">How to Kill a Witch — Zoe Venditozzi</div>
+        <div class="card">Gloria Don’t Speak — Lucy Apps</div>
+        <div class="card">High Finance — Eli Lederman</div>
+    </div>
+</section>
+
+<!-- FEATURED AUTHORS -->
+<section id="authors">
+    <h2 class="title">Featured Authors</h2>
+
+    <div class="author-grid">
+        <div class="author">Tayari Jones</div>
+        <div class="author">Han Kang</div>
+        <div class="author">Elif Shafak</div>
+        <div class="author">Chimamanda Ngozi Adichie</div>
+        <div class="author">Margaret Atwood</div>
+        <div class="author">Zadie Smith</div>
+        <div class="author">Oyinkan Braithwaite</div>
+        <div class="author">Brit Bennett</div>
+        <div class="author">Sally Rooney</div>
+        <div class="author">Jhumpa Lahiri</div>
+        <div class="author">Bernardine Evaristo</div>
+        <div class="author">Alice Walker</div>
+    </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section>
+    <h2 class="title">Reader Reviews</h2>
+
+    <div class="quote">“This club completely changed how I discover books. It feels like a global conversation.”</div><br>
+    <div class="quote">“I’ve never read so many powerful women authors in one place.”</div><br>
+    <div class="quote">“The discussions feel like being inside a literary café.”</div>
+</section>
+
+<!-- AUTHOR CTA -->
+<section style="background:var(--brown);color:white;">
+    <h2 class="title" style="color:white;">Featured Author Invitation</h2>
+    <p>We collaborate with authors globally to feature their work, host discussions, and connect them with readers.</p>
+    <br>
+    <a class="btn" href="#contact">Get Featured</a>
+</section>
+
+<!-- SUBMIT BOOK -->
+<section id="submit">
+    <h2 class="title">Submit Your Book</h2>
+    <p>Authors can submit their books for consideration in our upcoming reading list.</p>
+
+    <form>
+        <input type="text" placeholder="Author Name">
+        <input type="text" placeholder="Book Title">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Tell us about your book..."></textarea>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2 class="title">Contact & Collaboration</h2>
+    <p>Email: <strong>anitastewart.anny@gmail.com</strong></p>
+</section>
+
+<footer>
+    <p>READ WOMAN BOOKCLUB © 2026</p>
+</footer>
+
+</body>
+</html>
